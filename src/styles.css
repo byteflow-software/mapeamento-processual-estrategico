@@ -590,6 +590,20 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .hero-grid {
+    gap: 1.5rem;
+  }
+
+  .hero-media {
+    order: -1;
+  }
+
+  .hero-media img {
+    min-height: 0;
+    max-height: 380px;
+    aspect-ratio: 16 / 9;
+  }
+
   .timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -597,32 +611,101 @@ textarea:focus-visible {
   .cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .hero-media img {
-    min-height: 280px;
-    aspect-ratio: 16 / 10;
-  }
 }
 
 @media (max-width: 680px) {
+  :root {
+    --radius: 14px;
+    --radius-sm: 10px;
+  }
+
+  .container {
+    width: min(100% - 1.5rem, var(--container));
+  }
+
   .section {
-    padding: 4.1rem 0;
+    padding: 3rem 0;
   }
 
-  .topbar-inner {
-    min-height: 68px;
+  .hero {
+    padding: 1.5rem 0 2.5rem;
   }
 
-  .brand-copy strong {
-    font-size: 0.87rem;
+  .hero-grid {
+    gap: 1.2rem;
   }
 
-  .brand-copy > span {
-    font-size: 0.68rem;
+  .hero-media img {
+    max-height: 300px;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-sm);
   }
 
   .hero-content {
-    padding: 1.5rem;
+    padding: 1.4rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .kicker {
+    font-size: 0.72rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-actions {
+    margin-top: 1rem;
+  }
+
+  .hero-points {
+    margin-top: 1rem;
+    font-size: 0.92rem;
+  }
+
+  .topbar-inner {
+    min-height: 60px;
+    gap: 0.6rem;
+  }
+
+  .brand {
+    gap: 0.6rem;
+  }
+
+  .brand-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 0.82rem;
+  }
+
+  .brand-copy strong {
+    font-size: 0.82rem;
+  }
+
+  .brand-copy > span {
+    display: none;
+  }
+
+  .topbar .btn-ghost {
+    width: auto;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    font-size: 0.82rem;
   }
 
   .timeline,
@@ -631,13 +714,71 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .btn {
-    width: 100%;
+  .card {
+    padding: 1.2rem;
   }
 
-  .topbar .btn-ghost {
-    width: auto;
-    padding: 0.6rem 0.9rem;
-    font-size: 0.72rem;
+  .timeline-item {
+    padding: 1.1rem;
+  }
+
+  .institutional-grid li {
+    padding: 1.1rem;
+  }
+
+  .authority .section-narrow {
+    padding: 1.4rem;
+  }
+
+  .for-whom .split {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .split-form form {
+    padding: 1.2rem;
+  }
+
+  .faq details {
+    padding: 0.9rem 1rem;
+  }
+
+  .final-cta {
+    padding-bottom: 3rem;
+  }
+
+  .final-cta .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer {
+    padding: 1.2rem 0 1.5rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: min(100% - 1rem, var(--container));
+  }
+
+  .hero-content {
+    padding: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .brand-copy strong {
+    font-size: 0.75rem;
   }
 }
