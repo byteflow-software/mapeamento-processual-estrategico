@@ -1,0 +1,26 @@
+{
+  "name": "mapeamento-processual-estrategico",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Landing page Mapeamento Processual Estratégico - Dellano Sousa Advocacia",
+  "scripts": {
+    "dev": "node server/dev.mjs & vite",
+    "dev:api": "node server/dev.mjs",
+    "dev:client": "vite",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server && node scripts/prerender.mjs",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.0.14",
+    "@fontsource/manrope": "^5.0.20",
+    "dotenv": "^17.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "resend": "^6.11.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.6"
+  }
+}

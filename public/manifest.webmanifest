@@ -1,0 +1,11 @@
+{
+  "name": "Dellano Sousa Advocacia - Mapeamento Processual Estratégico",
+  "short_name": "Dellano Sousa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#040b14",
+  "theme_color": "#040b14",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
