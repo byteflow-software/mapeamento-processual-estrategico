@@ -1,11 +1,19 @@
-import { Resend } from "resend";
+const { Resend } = require("resend");
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const TO_EMAIL = process.env.LEAD_TO_EMAIL || "contato@dellanosousa.com.br";
 const FROM_EMAIL = process.env.LEAD_FROM_EMAIL || "site@dellanosousa.com.br";
 
-export default async function handler(req, res) {
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Método não permitido" });
@@ -45,12 +53,4 @@ export default async function handler(req, res) {
     console.error("Resend error:", err);
     return res.status(500).json({ error: "Erro ao enviar. Tente novamente." });
   }
-}
-
-function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
+};
