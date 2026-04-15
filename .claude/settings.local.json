@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vite *)",
+      "Bash(cp \"C:/Users/ryanm/OneDrive/Documentos/GitHub/dellanosousa/dellano-site/public/images/brand/favicon.png\" \"C:/Users/ryanm/OneDrive/Documentos/GitHub/mapeamento-processual-estrategico/public/favicon.png\")",
+      "Bash(cp \"C:/Users/ryanm/OneDrive/Documentos/GitHub/dellanosousa/dellano-site/public/images/brand/logo-white.png\" \"C:/Users/ryanm/OneDrive/Documentos/GitHub/mapeamento-processual-estrategico/public/logo-white.png\")",
+      "Bash(cp \"C:/Users/ryanm/OneDrive/Documentos/GitHub/dellanosousa/dellano-site/public/images/brand/logo-header.png\" \"C:/Users/ryanm/OneDrive/Documentos/GitHub/mapeamento-processual-estrategico/public/logo-header.png\")"
+    ]
+  }
+}
