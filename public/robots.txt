@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dellanosousa.adv.br/sitemap.xml
+Sitemap: https://www.peritoadvogado.com.br/sitemap.xml
