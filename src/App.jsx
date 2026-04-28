@@ -5,6 +5,7 @@ import Differentials from "./components/Differentials.jsx";
 import ForWhom from "./components/ForWhom.jsx";
 import HowItWorks from "./components/HowItWorks.jsx";
 import LeadForm from "./components/LeadForm.jsx";
+import LeadGate from "./components/LeadGate.jsx";
 import SocialProof from "./components/SocialProof.jsx";
 import Faq from "./components/Faq.jsx";
 import FinalCta from "./components/FinalCta.jsx";
@@ -32,6 +33,7 @@ export default function App() {
         <FinalCta whatsappUrl={WHATSAPP_URL} />
       </main>
       <Footer />
+      <LeadGate />
     </>
   );
 }

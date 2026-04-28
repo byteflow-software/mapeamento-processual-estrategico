@@ -964,3 +964,133 @@ textarea:disabled {
     font-size: 1.3rem;
   }
 }
+
+.lead-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.lead-gate__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 11, 20, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.lead-gate__panel {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 32px;
+  color: var(--text);
+  animation: lead-gate-in 0.25s ease-out;
+}
+
+@keyframes lead-gate-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lead-gate__panel .kicker {
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.lead-gate__panel h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.lead-gate__desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0 0 20px;
+}
+
+.lead-gate__panel .field {
+  margin-bottom: 14px;
+}
+
+.lead-gate__panel .field label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+.lead-gate__panel .field input {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.lead-gate__panel .field input:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+  border-color: var(--focus);
+}
+
+.lead-gate__optional {
+  color: var(--muted);
+  font-weight: normal;
+  font-size: 0.78rem;
+}
+
+.lead-gate__panel .btn-primary {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.lead-gate__privacy {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 14px 0 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.lead-gate__panel .form-feedback {
+  margin: 12px 0 0;
+  font-size: 0.88rem;
+}
+
+.lead-gate__panel .form-feedback.error {
+  color: var(--danger);
+}
+
+@media (max-width: 480px) {
+  .lead-gate__panel {
+    padding: 24px 20px;
+  }
+  .lead-gate__panel h2 {
+    font-size: 1.35rem;
+  }
+}
